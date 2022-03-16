@@ -1,0 +1,3 @@
+var N = null;var sourcesIndex = {};
+sourcesIndex["open_cdd"] = {"name":"","dirs":[{"name":"component_system","dirs":[{"name":"components","dirs":[{"name":"help","files":["mod.rs"]},{"name":"misc","files":["mod.rs"]},{"name":"modo","files":["mod.rs","time.rs"]},{"name":"slash","files":["mod.rs"]},{"name":"tickets","files":["mod.rs"]},{"name":"utils","files":["app_command.rs","commands.rs","message.rs","mod.rs","send.rs"]}],"files":["mod.rs"]}],"files":["command_parser.rs","data.rs","event.rs","framework.rs","manager.rs","mod.rs","slash.rs"]}],"files":["bot.rs","config.rs","main.rs","util.rs"]};
+createSourceSidebar();

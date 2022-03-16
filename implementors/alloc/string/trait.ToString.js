@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["open_cdd"] = [{"text":"impl&lt;'a&gt; <a class=\"trait\" href=\"https://doc.rust-lang.org/1.59.0/alloc/string/trait.ToString.html\" title=\"trait alloc::string::ToString\">ToString</a> for <a class=\"enum\" href=\"open_cdd/component_system/command_parser/enum.ParseError.html\" title=\"enum open_cdd::component_system::command_parser::ParseError\">ParseError</a>&lt;'a&gt;","synthetic":false,"types":["open_cdd::component_system::command_parser::ParseError"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

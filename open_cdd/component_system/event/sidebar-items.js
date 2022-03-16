@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Event","Event received over a websocket connection"]],"struct":[["EventDispatcher","Event handler qui dispatch les events aux composants."]]});

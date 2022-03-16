@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["has_permission","Retourne Ok(vrai) si membre a le role requis pour utiliser la commande. Peut retourner une erreur si la liste des roles du membre n’a pas pû être récupérée."],["is_dm","Retourne vrai s’il sagit d’un message privé au bot"],["try_match",""]],"mod":[["app_command",""],["commands",""],["message",""],["send",""]]});

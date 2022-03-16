@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["open_cdd"] = [{"text":"impl <a class=\"trait\" href=\"https://docs.rs/serenity/*/serenity/client/event_handler/trait.RawEventHandler.html\" title=\"trait serenity::client::event_handler::RawEventHandler\">RawEventHandler</a> for <a class=\"struct\" href=\"open_cdd/component_system/event/struct.EventDispatcher.html\" title=\"struct open_cdd::component_system::event::EventDispatcher\">EventDispatcher</a>","synthetic":false,"types":["open_cdd::component_system::event::EventDispatcher"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

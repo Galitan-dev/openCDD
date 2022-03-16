@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["custom","Envoie un message personnalisé dans le channel."],["error","Envoie un message d’erreur dans le channel."],["no_perm","Envoie un message d’erreur qui indique que l’envoyeur n’a pas la permission dans le channel."],["success","Envoie un message d’erreur dans le channel."]]});

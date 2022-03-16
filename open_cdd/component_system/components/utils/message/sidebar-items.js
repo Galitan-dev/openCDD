@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["custom_embed","Génère un message personnalisé"],["error","Génère un message d’erreur"],["success","Génère un message de succès"]],"struct":[["Message","Interface de création de message"]]});

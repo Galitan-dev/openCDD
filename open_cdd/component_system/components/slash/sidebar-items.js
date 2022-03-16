@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["slash_argument","Helper pour la lecture des différents arguments d’une commande du group `slash`."]],"struct":[["SlashCommands","Composant de gestion des commandes de l’application."]]});

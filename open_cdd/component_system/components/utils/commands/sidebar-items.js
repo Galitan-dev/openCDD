@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["ApplicationCommandInteractionDataOptionValue","The resolved value of an [`ApplicationCommandInteractionDataOption`]."],["CommandType",""],["Value",""]],"struct":[["Argument",""],["Command",""]],"trait":[["ToCommand",""]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["CommandType",""]],"macro":[["get_argument","Helper pour accéder à un argument d’une commande"],["get_argument_result","Helper pour accéder à un argument d’une commande"],["get_optional_argument_result","Helper pour accéder à un argument d’une commande s’il existe"]],"struct":[["ApplicationCommandEmbed","Conteneur d’application command"]]});
