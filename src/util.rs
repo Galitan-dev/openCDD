@@ -1,6 +1,6 @@
 //! Fonctions utiles pour l'ensemble du projet
 
-use std::{ops::{Deref, DerefMut}, sync::Arc};
+use std::sync::Arc;
 
 use futures_locks::{RwLock, RwLockReadGuard, RwLockWriteGuard};
 

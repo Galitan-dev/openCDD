@@ -6,7 +6,7 @@ pub struct Manager {
 }
 
 impl Manager {
-    pub fn new () -> Self {
+    pub fn new() -> Self {
         Manager {
             components: Vec::new(),
         }

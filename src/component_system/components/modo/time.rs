@@ -15,7 +15,6 @@ const UNITS: &[(&str, u64)] = &[
     ("an", YEARS),
 ];
 
-
 pub fn parse<S: AsRef<str>>(duration: S) -> Result<u64, String> {
     lazy_static::lazy_static!(
         static ref STR_RE_UNITS: String = format!("{}{}", UNITS[0].0, UNITS.iter().skip(1).map(|v| format!("|{}",v.0)).collect::<String>());
@@ -25,15 +24,37 @@ pub fn parse<S: AsRef<str>>(duration: S) -> Result<u64, String> {
         static ref RE_TIME: regex::Regex = regex::Regex::new(r"(\d{1,2}):(\d{2})(?:(\d{2}))?").unwrap();
     );
     if let Some(dur_captures) = RE_DURATION.captures(duration.as_ref()) {
-        let mut duration = dur_captures.get(1).unwrap().as_str().parse::<u64>().unwrap();
+        let mut duration = dur_captures
+            .get(1)
+            .unwrap()
+            .as_str()
+            .parse::<u64>()
+            .unwrap();
         let unit = dur_captures.get(2).unwrap().as_str();
-        duration *= UNITS.iter()
-            .find(|v| v.0 == unit).map(|v| v.1)
-            .ok_or_else(|| format!(r#"Unité de durée "{}" inconnue, attendue: {}"#, unit, *STR_LIST_UNITS))?;
+        duration *= UNITS
+            .iter()
+            .find(|v| v.0 == unit)
+            .map(|v| v.1)
+            .ok_or_else(|| {
+                format!(
+                    r#"Unité de durée "{}" inconnue, attendue: {}"#,
+                    unit, *STR_LIST_UNITS
+                )
+            })?;
         Ok(duration)
     } else if let Some(dur_captures) = RE_TIME.captures(duration.as_ref()) {
-        let hours = dur_captures.get(1).unwrap().as_str().parse::<u64>().unwrap();
-        let minutes = dur_captures.get(2).unwrap().as_str().parse::<u64>().unwrap();
+        let hours = dur_captures
+            .get(1)
+            .unwrap()
+            .as_str()
+            .parse::<u64>()
+            .unwrap();
+        let minutes = dur_captures
+            .get(2)
+            .unwrap()
+            .as_str()
+            .parse::<u64>()
+            .unwrap();
         let seconds = match dur_captures.get(3) {
             Some(s) => s.as_str().parse::<u64>().unwrap(),
             None => 0,

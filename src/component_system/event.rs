@@ -1,4 +1,3 @@
-
 use serenity::async_trait;
 use serenity::client::{Context, RawEventHandler};
 pub use serenity::model::event::Event;
@@ -6,7 +5,7 @@ pub use serenity::model::event::Event;
 use super::manager::ArcManager;
 
 /// Event handler qui dispatch les events aux composants.
-/// 
+///
 /// Dès qu'un event est reçu par le client, il est envoyé à tous les composants enregistrés.
 /// C'est au composant de traiter quel type d'event il a besoin.
 pub struct EventDispatcher {
@@ -15,9 +14,7 @@ pub struct EventDispatcher {
 
 impl EventDispatcher {
     pub fn new(cmp_manager: ArcManager) -> EventDispatcher {
-        EventDispatcher{
-            cmp_manager,
-        }
+        EventDispatcher { cmp_manager }
     }
 }
 
@@ -29,8 +26,9 @@ impl RawEventHandler for EventDispatcher {
             for component in components {
                 let component = component.read().await;
                 if let Err(what) = component.event(&ctx, &evt).await {
-                    println!("[{}] Module {} command error: {}\nEvent: {:?}\n\n",
-                        chrono::Local::now().format("%Y-%m-%d %H:%M:%S"), 
+                    println!(
+                        "[{}] Module {} command error: {}\nEvent: {:?}\n\n",
+                        chrono::Local::now().format("%Y-%m-%d %H:%M:%S"),
                         component.name(),
                         what,
                         evt
